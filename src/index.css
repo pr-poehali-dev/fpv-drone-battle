@@ -97,5 +97,64 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: "Roboto", sans-serif;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap");
+
+@layer utilities {
+  .combat-bg {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  }
+
+  .combat-border {
+    border: 2px solid #e53e3e;
+    box-shadow: 0 0 10px rgba(229, 62, 62, 0.3);
+  }
+
+  .military-text {
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .crosshair {
+    position: relative;
+  }
+
+  .crosshair::before,
+  .crosshair::after {
+    content: "";
+    position: absolute;
+    background: #e53e3e;
+  }
+
+  .crosshair::before {
+    width: 20px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .crosshair::after {
+    width: 2px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .border-combat-red {
+    border-color: #e53e3e !important;
+  }
+
+  .text-combat-red {
+    color: #e53e3e !important;
+  }
+
+  .bg-combat-red {
+    background-color: #e53e3e !important;
   }
 }
